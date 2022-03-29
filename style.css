@@ -22,3 +22,14 @@
 .color_text_notifiche {
   color: #8edafc;
 }
+
+.bg_text_area {
+  background-image: url(img-bolzapp/mine.jpg);
+}
+
+.h_text_area {
+  height: 675px;
+}
+.bg_green {
+  background-color: #d5f9ba;
+}
