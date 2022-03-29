@@ -171,5 +171,10 @@ const app= new Vue({
     el:'#root',
     data:{
         contacts,
+        mioAvatar:{
+            mioNome:'Sofia',
+            avatar:'img/avatar_io.jpg'
+        }
     }
+
 })

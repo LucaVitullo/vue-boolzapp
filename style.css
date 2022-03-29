@@ -7,3 +7,18 @@
 .bg-sofia {
   background-color: #eaeaea;
 }
+
+.h_50 {
+  height: 50px;
+}
+.w_50 {
+  width: 50px;
+}
+
+.bg_notifiche {
+  background-color: #8edafc;
+}
+
+.color_text_notifiche {
+  color: #8edafc;
+}
