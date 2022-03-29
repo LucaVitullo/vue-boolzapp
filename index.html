@@ -19,16 +19,16 @@
     <title>VUE-BOOLZAPP</title>
   </head>
   <body>
-    <div id="root">
+    <div id="root" class="container ">
       <div class="row">
-        <div class="col-4">
+        <div class="col-4 ps-0">
           <div
             class="row bg-sofia justify-content-between align-items-center border-end border-dark"
           >
             <div class="col-4 d-flex">
               <div class="container px-1">
                 <img
-                  class="w-50 rounded-circle my-2"
+                  class="w_50 rounded-circle my-2"
                   src="img-bolzapp/avatar_io.jpg"
                   alt="img-sofia"
                 />
@@ -44,45 +44,79 @@
           <div class="row">
             <div class="col-12 bg_notifiche">
               <div class="row align-items-center">
-                <div class="col-2 text-center ms-3 ">
-                  <div class="container rounded-circle bg-light p-2 align-items-center">
+                <div class="col-2 text-center ms-3">
+                  <div
+                    class="container rounded-circle bg-light p-2 align-items-center"
+                  >
                     <i
-                      class="fa-solid fa-bell-slash  text-center color_text_notifiche fa-md w-30 "
+                      class="fa-solid fa-bell-slash text-center color_text_notifiche fa-md w-30"
                     ></i>
                   </div>
                 </div>
                 <div class="col-8 p-0 text-start">
-                  <p class="m-0 mt-3">Ricevi notifiche di nuovi messaggi</p>
-                  <p class="text-decoration-underline text-secondary">
+                  <p class="m-0 ">Ricevi notifiche di nuovi messaggi</p>
+                  <p class="text-decoration-underline text-secondary m-0">
                     Attiva notifiche desktop
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div>      
-               <i class="fa-solid fa-magnifying-glass text-secondary p-3"></i>
-              <input
-              class="col-9 m-2"
+          <div>
+            <i class="fa-solid fa-magnifying-glass text-secondary p-2"></i>
+            <input
+              class="col-9 m-0"
               type="text"
               placeholder="cerca o inizia una nuova chat"
-              />
+            />
           </div>
 
-          <div v-for="(item, index) in contacts"
-          class="col-12 ms-2 border-bottom d-flex justify-content-between align-items-center pt-2 ps-3">
-          <div class="d-flex">
-              <img class="w-30 h_50 rounded-circle me-3" :src="'img-bolzapp/avatar' + item.avatar + '.jpg'" alt="avatar-img">
+          <div
+            v-for="(item, index) in contacts"
+            class="col-12 p-0  border-bottom d-flex justify-content-between align-items-center  ps-3"
+          >
+            <div class="d-flex">
+              <img
+                class="w-30 h_50 rounded-circle me-3"
+                :src="'img-bolzapp/avatar' + item.avatar + '.jpg'"
+                alt="avatar-img"
+              />
               <div>
-                  <div class="fw-bold">{{item.name}}</div>
-                  <p class="text-secondary">Ultimo messaggio inviato</p>
+                <div class="fw-bold">{{item.name}}</div>
+                <p class="text-secondary m-0">Ultimo messaggio inviato</p>
               </div>
+            </div>
+            <div class="text-secondary mb-5">12:00</div>
           </div>
-          <div class="text-secondary mb-5">12:00</div>
-      </div>
         </div>
+        <div class="col-8">
+          <div class="row">
+            <div class="col-12">
+              <div
+              class="row bg-sofia justify-content-between align-items-center border-end border-dark"
+            >
+            <div class="col-12 d-flex justify-content-between align-items-center ">
+              <div class="d-flex align-items-center">
+                <img
+                class="w_50 rounded-circle my-2 me-3"
+                src="img-bolzapp/avatar_1.jpg"
+                alt="img-sofia"
+              />
+                  <div>
+                      <div class="fw-bold">Michele</div>
+                      <p class="text-secondary mb-0">Ultimo accesso oggi alle 12:00</p>
+                  </div>
+              </div>
+              <div><i class="fa-solid fa-magnifying-glass text-secondary p-3"></i>
+                  <i class="fa-solid fa-paperclip me-3 text-secondary"></i>
+                  <i class="fa-solid fa-ellipsis-vertical me-3 text-secondary"></i>
+              </div>
+            </div>
+
+            </div>
+          </div>
+          <div class="row"></div>
         </div>
-        <div class="col-8"></div>
       </div>
     </div>
   </body>
