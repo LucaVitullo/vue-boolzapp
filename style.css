@@ -32,6 +32,12 @@
 }
 .bg_green {
   background-color: #d5f9ba;
+  align-self: flex-end;
+}
+
+.bg_white {
+  background-color: white;
+  margin-left: 15px;
 }
 
 .c_p {

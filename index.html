@@ -77,14 +77,15 @@
           </div>
           <div class="container p-0">
             <div
-              v-for="(item, index) in contacts"
+              v-for="(item, index) in contacts "
+              @click="mostraAvatar(index)"
               class="col-12 p-0 border-bottom d-flex justify-content-between align-items-center"
             >
               <div class="d-flex c_p">
                 <img
                   class="w-30 h_50 rounded-circle me-3 my-2"
                   :src="'img-bolzapp/avatar' + item.avatar + '.jpg'"
-                  alt="avatar-img"
+                  :alt="contacts.name"
                 />
                 <div>
                   <div class="fw-bold">{{item.name}}</div>
@@ -108,11 +109,11 @@
                   <div class="d-flex align-items-center">
                     <img
                       class="w_50 rounded-circle my-2 me-3"
-                      src="img-bolzapp/avatar_1.jpg"
+                      :src="immagineAvatar(contacts[indice].avatar)"
                       alt="img-avatar"
                     />
                     <div>
-                      <div class="fw-bold">Michele</div>
+                      <div class="fw-bold">{{contacts[indice].name}}</div>
                       <p class="text-secondary mb-1">
                         Ultimo accesso oggi alle 12:00
                       </p>
@@ -136,21 +137,15 @@
             <!--Contenitore chat-->
             <div class="row h_text_area">
               <div class="col-12">
-                <div class="row justify-content-end pt-5">
-                  <div class="col-5 bg_green text-center p-3 rounded-3">
-                    scjhkcbshkc
-                  </div>
-                </div>
-                <div class="row justify-content-start ps-4">
+                <div
+                  class="row flex-column pt-5"
+                  v-for="message in contacts[indice].messages"
+                >
                   <div
-                    class="col-5 text-dark bg-light text-center rounded-3 p-3"
+                    class="col-5 text-center p-3 rounded-3"
+                    :class="messaggiRicevuti(message.status)"
                   >
-                    scjhkcbshkc
-                  </div>
-                </div>
-                <div class="row justify-content-end pt-5">
-                  <div class="col-5 bg_green text-center p-3 rounded-3">
-                    scjhkcbshkc
+                    {{message.message}}
                   </div>
                 </div>
               </div>

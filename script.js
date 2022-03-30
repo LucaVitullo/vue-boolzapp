@@ -171,13 +171,29 @@ const app= new Vue({
     el:'#root',
     data:{
         contacts,
-        personShow: 0,
+        indice:0,
         mioAvatar:{
             mioNome:'Sofia',
             avatar:'img/avatar_io.jpg'
         },
     },
     methods:{
+        mostraAvatar(i){
+           this.indice = i;
+        },
+
+        immagineAvatar(avatar){
+            return `img-bolzapp/avatar${avatar}.jpg`
+        },
+
+
+        messaggiRicevuti(status){
+            if(status ==='sent'){
+                return 'bg_green'
+            }
+            return 'bg_white'
+        }
+
 
     },
 })
