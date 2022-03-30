@@ -43,3 +43,13 @@
 .c_p {
   cursor: pointer;
 }
+
+.position-absolute {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  font-size: x-small;
+}
+.position-relative {
+  position: relative;
+}

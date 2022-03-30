@@ -85,7 +85,7 @@
                 <img
                   class="w-30 h_50 rounded-circle me-3 my-2"
                   :src="'img-bolzapp/avatar' + item.avatar + '.jpg'"
-                  :alt="contacts.name"
+                  :alt="contacts[indice].name"
                 />
                 <div>
                   <div class="fw-bold">{{item.name}}</div>
@@ -142,10 +142,11 @@
                   v-for="message in contacts[indice].messages"
                 >
                   <div
-                    class="col-5 text-center p-3 rounded-3"
+                    class="col-5 text-center p-2 rounded-3 position-relative"
                     :class="messaggiRicevuti(message.status)"
                   >
                     {{message.message}}
+                    <span class="position-absolute">{{message.date}}</span>
                   </div>
                 </div>
               </div>
@@ -157,7 +158,9 @@
                 class="fa-regular fa-face-smile c_p mx-3 text-secondary col-1 fa-lg"
               ></i>
               <input
+                v-model="testo"
                 class="p-2 border-0 col-9 rounded"
+                @keyup.enter="scriviUnMessaggio(contacts[indice].messages)"
                 type="text"
                 placeholder="Scrivi un messaggio"
               />

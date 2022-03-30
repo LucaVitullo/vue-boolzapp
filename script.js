@@ -172,6 +172,7 @@ const app= new Vue({
     data:{
         contacts,
         indice:0,
+        testo:'',
         mioAvatar:{
             mioNome:'Sofia',
             avatar:'img/avatar_io.jpg'
@@ -192,7 +193,17 @@ const app= new Vue({
                 return 'bg_green'
             }
             return 'bg_white'
-        }
+        },
+
+        scriviUnMessaggio(message){
+            
+            message.push({
+                date: '10/01/2020 15:30:55',
+                message: this.testo,
+                status: 'sent',
+            });
+            this.testo='';
+        },
 
 
     },
