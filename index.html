@@ -55,7 +55,7 @@
                 </div>
                 <div class="col-8 p-0 text-start">
                   <p class="m-0 ">Ricevi notifiche di nuovi messaggi</p>
-                  <p class="text-decoration-underline text-secondary m-0 py-1">
+                  <p class="c_p text-decoration-underline text-secondary m-0 py-1">
                     Attiva notifiche desktop
                   </p>
                 </div>
@@ -63,19 +63,19 @@
             </div>
           </div>
           <div class=" row p-1 bg-sofia text-center">
-            <i class=" col-1 bg-light border fa-solid fa-magnifying-glass text-secondary p-1"></i>
+            <i class=" c_p col-1 bg-light border fa-solid fa-magnifying-glass text-secondary rounded p-1"></i>
             <input
-              class="col-11 m-0 border"
+              class="col-11 m-0 border rounded"
               type="text"
-              placeholder="cerca o inizia una nuova chat"
+              placeholder="Cerca o inizia una nuova chat"
             />
           </div>
-
-          <div
+          <div class="container p-0">
+            <div
             v-for="(item, index) in contacts"
-            class="col-12 p-0  border-bottom d-flex justify-content-between align-items-center  ps-3"
+            class="col-12 p-0  border-bottom d-flex justify-content-between align-items-center "
           >
-            <div class="d-flex">
+            <div class="d-flex c_p">
               <img
                 class="w-30 h_50 rounded-circle me-3 my-2"
                 :src="'img-bolzapp/avatar' + item.avatar + '.jpg'"
@@ -88,35 +88,56 @@
             </div>
             <div class="text-secondary mb-4">12:00</div>
           </div>
+          </div>
         </div>
+        <!--CONTENITORE DESTRO-->
         <div class="col-8 bg_text_area">
           <div class="row">
             <div class="col-12">
               <div
               class="row bg-sofia justify-content-between align-items-center border-end border-dark"
             >
-            <div class="col-12 d-flex justify-content-between align-items-center ">
+            <div class="col-12 c_p d-flex justify-content-between align-items-center ">
               <div class="d-flex align-items-center">
                 <img
                 class="w_50 rounded-circle my-2 me-3"
                 src="img-bolzapp/avatar_1.jpg"
-                alt="img-sofia"
+                alt="img-avatar"
               />
                   <div>
                       <div class="fw-bold">Michele</div>
                       <p class="text-secondary mb-1">Ultimo accesso oggi alle 12:00</p>
                   </div>
               </div>
-              <div><i class="fa-solid fa-magnifying-glass text-secondary p-3"></i>
-                  <i class="fa-solid fa-paperclip me-3 text-secondary"></i>
-                  <i class="fa-solid fa-ellipsis-vertical me-3 text-secondary"></i>
+              <div><i class="fa-solid fa-magnifying-glass text-secondary p-3 c_p"></i>
+                  <i class="fa-solid fa-paperclip me-3 text-secondary c_p"></i>
+                  <i class="fa-solid fa-ellipsis-vertical me-3 text-secondary c_p"></i>
               </div>
             </div>
 
             </div>
           </div>
-          <div class="container h_text_area d-flex justify-content-end">                        
+
+          <!--Contenitore chat-->
+          <div class="row h_text_area ">     
+            <div class="col-12">
+              <div class="row justify-content-end pt-5">
+                <div class="col-5 bg_green text-center p-3 rounded-3">scjhkcbshkc</div>
+              </div>
+              <div class="row justify-content-start ps-4">
+                <div class="col-5 text-dark bg-light text-center rounded-3 p-3">scjhkcbshkc</div>
+              </div>
+            </div>
+
+                 
           </div>
+
+          <!--CHAT-->
+          <div class="row bg-sofia m-0 p-1 col-12 align-items-center">
+            <i class="fa-regular fa-face-smile c_p mx-3 text-secondary col-1 fa-lg"></i>
+            <input class="p-2 border-0 col-9 rounded " type="text"placeholder="Scrivi un messaggio">
+            <i class="fa-solid fa-microphone c_p col-1 text-secondary text-end fa-lg"></i>
+          </div>  
         </div>
       </div>
     </div>

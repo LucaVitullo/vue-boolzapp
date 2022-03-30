@@ -28,8 +28,12 @@
 }
 
 .h_text_area {
-  height: 675px;
+  height: 625px;
 }
 .bg_green {
   background-color: #d5f9ba;
+}
+
+.c_p {
+  cursor: pointer;
 }
