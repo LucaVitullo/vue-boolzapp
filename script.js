@@ -175,10 +175,9 @@ const app= new Vue({
         mioAvatar:{
             mioNome:'Sofia',
             avatar:'img/avatar_io.jpg'
-        }
+        },
     },
     methods:{
-        
-    }
 
+    },
 })
