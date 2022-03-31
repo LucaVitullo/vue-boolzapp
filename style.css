@@ -46,8 +46,8 @@
 
 .position-absolute {
   position: absolute;
-  bottom: 2px;
-  right: 2px;
+  bottom: 1px;
+  right: 5px;
   font-size: x-small;
 }
 .position-relative {

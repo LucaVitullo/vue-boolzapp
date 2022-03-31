@@ -198,13 +198,20 @@ const app= new Vue({
         scriviUnMessaggio(message){
             
             message.push({
-                date: '10/01/2020 15:30:55',
+                date: '10/02/2020 15:50:55',
                 message: this.testo,
                 status: 'sent',
             });
             this.testo='';
+            setTimeout(this.rispostaOk,1000);
         },
 
-
+        rispostaOk(){
+            contacts[this.indice].messages.push({
+                date: '10/01/2020 15:55:00',
+                message: 'Ok!',
+                status: 'received',
+            });
+        },
     },
 })
