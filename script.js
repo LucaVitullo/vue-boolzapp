@@ -1,7 +1,3 @@
-/*Milestone 1
-Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e dall’interlocutore (bianco) assegnando due classi CSS diverse
-Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
-QUINDI solo la parte a sinistra sarà dinamica (per mostrare la lista contatti), mentre a destra ci sarà HTML statico, uguale a quello presentato nel layout */
 
 const contacts = [
     {
@@ -173,6 +169,7 @@ const app= new Vue({
         contacts,
         indice:0,
         testo:'',
+        ricerca:'',
         mioAvatar:{
             mioNome:'Sofia',
             avatar:'img/avatar_io.jpg'
@@ -187,6 +184,11 @@ const app= new Vue({
             return `img-bolzapp/avatar${avatar}.jpg`
         },
 
+        UltimoMessaggio: function (contattoMessaggio) {
+            return contattoMessaggio[contattoMessaggio.length - 1].message;
+        },
+
+
 
         messaggiRicevuti(status){
             if(status ==='sent'){
@@ -198,7 +200,7 @@ const app= new Vue({
         scriviUnMessaggio(message){
             
             message.push({
-                date: '10/02/2020 15:50:55',
+                date: '10/01/2020 15:50:55',
                 message: this.testo,
                 status: 'sent',
             });
@@ -208,10 +210,26 @@ const app= new Vue({
 
         rispostaOk(){
             contacts[this.indice].messages.push({
-                date: '10/01/2020 15:55:00',
+                date: '10/01/2020 15:50:55',
                 message: 'Ok!',
                 status: 'received',
             });
+        },
+
+
+
+        ricercaUtenti(){
+            for(let i = 0; i < contacts.length;i++){
+                if(this.contacts[i].name.includes(this.ricerca)){
+                    this.contacts[i].visible = true;
+                }
+                else {
+                    this.contacts[i].visible = false;
+                }
+
+            }
+            this.ricerca ='';
+
         },
     },
 })
